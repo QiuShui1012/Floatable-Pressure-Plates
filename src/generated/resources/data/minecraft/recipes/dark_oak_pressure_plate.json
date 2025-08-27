@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "fpp:floatable_dark_oak_pressure_plate"
+    }
+  ],
+  "result": {
+    "item": "minecraft:dark_oak_pressure_plate"
+  }
+}

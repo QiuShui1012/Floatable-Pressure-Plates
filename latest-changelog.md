@@ -1,7 +1,7 @@
 ## What's new
-- **First release version**
+- **Added recipes that crafts between two types of pressure plates**
 
 ****************************************
 
 ## 新更改
-- **首个发布版本**
+- **添加了在两种压力板之间相互合成的配方**

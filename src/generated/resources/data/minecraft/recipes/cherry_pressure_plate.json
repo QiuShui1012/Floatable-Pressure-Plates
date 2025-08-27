@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "fpp:floatable_cherry_pressure_plate"
+    }
+  ],
+  "result": {
+    "item": "minecraft:cherry_pressure_plate"
+  }
+}

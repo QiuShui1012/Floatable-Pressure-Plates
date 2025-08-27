@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "fpp:floatable_jungle_pressure_plate"
+    }
+  ],
+  "result": {
+    "item": "minecraft:jungle_pressure_plate"
+  }
+}

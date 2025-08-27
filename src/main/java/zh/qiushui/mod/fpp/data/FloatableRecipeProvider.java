@@ -39,6 +39,10 @@ public class FloatableRecipeProvider extends RecipeProvider {
                 .requires(original)
                 .unlockedBy(getHasName(original), has(original))
                 .save(provider);
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE, original)
+                .requires(block)
+                .unlockedBy(getHasName(original), has(original))
+                .save(provider);
         }
     }
 }

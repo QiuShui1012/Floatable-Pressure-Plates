@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "fpp:floatable_polished_blackstone_pressure_plate"
+    }
+  ],
+  "result": {
+    "item": "minecraft:polished_blackstone_pressure_plate"
+  }
+}
