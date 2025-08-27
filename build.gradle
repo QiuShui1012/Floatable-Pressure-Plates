@@ -6,10 +6,18 @@ plugins {
 }
 
 
-group = mod_group_id
-version = mod_version + "-forge+1.20.1"
-base.archivesName = archives_name
-java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+String buildNumber
+String buildType = 'build'
+if (System.getenv("CI_BUILD") == 'false') buildNumber = null
+else {
+    if (System.getenv("PR_BUILD") != 'false') buildType = 'pr'
+    buildNumber = System.getenv("GITHUB_RUN_NUMBER")
+}
+
+version = mod_version + (buildNumber != null ? "+${buildType}.${buildNumber}" : "")
+group = maven_group
+base.archivesName = "${archives_name}-forge-1.20.1"
+java.toolchain.languageVersion = JavaLanguageVersion.of(java_version)
 
 minecraft {
     // The mappings can be changed at any time and must be in the following format.
@@ -165,23 +173,23 @@ publishMods {
     modLoaders.add("neoforge")
 
     curseforge {
-        projectId = "placeholder"
-        projectSlug = "placeholder"
+        projectId = "1335973"
+        projectSlug = "floatable-pressure-plates"
         accessToken = providers.environmentVariable("CURSEFORGE_TOKEN")
         minecraftVersions.addAll("1.20.1")
-        displayName = version
+        displayName = "forge-1.20.1-${mod_version}"
     }
     modrinth {
-        projectId = "placeholder"
+        projectId = "elKFEeyo"
         accessToken = providers.environmentVariable("MODRINTH_TOKEN")
         minecraftVersions.addAll("1.20.1")
-        displayName = mod_version
+        displayName = "${mod_version}"
     }
     github {
         repository = "QiuShui1012/Floatable-Pressure-Plates"
         accessToken = providers.environmentVariable("GITHUB_TOKEN")
         commitish = "forge-1.20.1"
-        displayName = project.version
-        tagName = project.version
+        displayName = "${project.version}"
+        tagName = "${project.version}"
     }
 }
