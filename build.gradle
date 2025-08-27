@@ -168,6 +168,7 @@ tasks.withType(JavaCompile).configureEach {
 
 publishMods {
     file = jar.archiveFile
+    changelog = file("latest-changelog.md").text
     type = STABLE
     modLoaders.add("forge")
     modLoaders.add("neoforge")
