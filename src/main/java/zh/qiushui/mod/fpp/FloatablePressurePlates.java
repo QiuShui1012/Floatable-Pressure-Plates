@@ -14,8 +14,9 @@ import zh.qiushui.mod.fpp.init.ModItemGroups;
 public class FloatablePressurePlates {
     public static final String MOD_ID = "fpp";
 
-    public FloatablePressurePlates(FMLJavaModLoadingContext ctx) {
-        IEventBus modEventBus = ctx.getModEventBus();
+    @SuppressWarnings("removal")
+    public FloatablePressurePlates() {
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModBlocks.register(modEventBus);
         ModItemGroups.register(modEventBus);
