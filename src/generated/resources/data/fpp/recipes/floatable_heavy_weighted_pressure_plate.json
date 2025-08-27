@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "minecraft:heavy_weighted_pressure_plate"
+    }
+  ],
+  "result": {
+    "item": "fpp:floatable_heavy_weighted_pressure_plate"
+  }
+}

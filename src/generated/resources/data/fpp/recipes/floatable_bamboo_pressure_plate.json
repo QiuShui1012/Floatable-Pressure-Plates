@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "minecraft:bamboo_pressure_plate"
+    }
+  ],
+  "result": {
+    "item": "fpp:floatable_bamboo_pressure_plate"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "minecraft:warped_pressure_plate"
+    }
+  ],
+  "result": {
+    "item": "fpp:floatable_warped_pressure_plate"
+  }
+}
