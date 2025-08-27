@@ -21,9 +21,6 @@ public class FloatableWeightedPressurePlateBlock extends WeightedPressurePlateBl
 
     public FloatableWeightedPressurePlateBlock(int maxWeight, Properties properties, BlockSetType type) {
         super(maxWeight, properties, type);
-        this.descriptionId = super.getDescriptionId()
-            .replace(FloatablePressurePlates.MOD_ID, ResourceLocation.DEFAULT_NAMESPACE)
-            .replace("floatable_", "");
     }
 
     @Override

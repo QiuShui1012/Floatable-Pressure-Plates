@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_heavy_weighted_pressure_plate": {
+    "has_jungle_pressure_plate": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:heavy_weighted_pressure_plate"
+              "minecraft:jungle_pressure_plate"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:heavy_weighted_pressure_plate"
+        "recipe": "fpp:minecraft_jungle_pressure_plate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_heavy_weighted_pressure_plate",
+      "has_jungle_pressure_plate",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:heavy_weighted_pressure_plate"
+      "fpp:minecraft_jungle_pressure_plate"
     ]
   },
   "sends_telemetry_event": false

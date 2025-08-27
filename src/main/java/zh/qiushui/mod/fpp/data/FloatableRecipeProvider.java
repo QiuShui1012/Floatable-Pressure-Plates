@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.BasePressurePlateBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.registries.ForgeRegistries;
+import zh.qiushui.mod.fpp.FloatablePressurePlates;
 import zh.qiushui.mod.fpp.init.ModBlocks;
 
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -32,9 +33,10 @@ public class FloatableRecipeProvider extends RecipeProvider {
     protected void buildRecipes(Consumer<FinishedRecipe> provider) {
         for (Supplier<BasePressurePlateBlock> blockGetter : ModBlocks.PRESSURE_PLATES) {
             Block block = blockGetter.get();
-            Block original = Objects.requireNonNull(ForgeRegistries.BLOCKS.getValue(ResourceLocation.withDefaultNamespace(
+            ResourceLocation originalId = ResourceLocation.withDefaultNamespace(
                 Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath().replace("floatable_", "")
-            )));
+            );
+            Block original = Objects.requireNonNull(ForgeRegistries.BLOCKS.getValue(originalId));
             ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE, block)
                 .requires(original)
                 .unlockedBy(getHasName(original), has(original))
@@ -42,7 +44,7 @@ public class FloatableRecipeProvider extends RecipeProvider {
             ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE, original)
                 .requires(block)
                 .unlockedBy(getHasName(original), has(original))
-                .save(provider);
+                .save(provider, FloatablePressurePlates.of(originalId.toString().replace(':', '_')));
         }
     }
 }

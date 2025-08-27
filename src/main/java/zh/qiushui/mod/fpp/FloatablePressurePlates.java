@@ -1,11 +1,13 @@
 package zh.qiushui.mod.fpp;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import zh.qiushui.mod.fpp.data.FloatableDataProvider;
 import zh.qiushui.mod.fpp.data.FloatableRecipeProvider;
+import zh.qiushui.mod.fpp.data.FloatableTagProvider;
 import zh.qiushui.mod.fpp.data.LangHandler;
 import zh.qiushui.mod.fpp.init.ModBlocks;
 import zh.qiushui.mod.fpp.init.ModItemGroups;
@@ -24,9 +26,14 @@ public class FloatablePressurePlates {
         modEventBus.addListener(FloatablePressurePlates::onGatherData);
     }
 
+    public static ResourceLocation of(String path) {
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
+    }
+
     public static void onGatherData(GatherDataEvent event) {
         FloatableDataProvider.provide(event);
         FloatableRecipeProvider.provide(event);
+        FloatableTagProvider.provide(event);
         LangHandler.provide(event);
     }
 }

@@ -9,7 +9,6 @@ import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.registries.ForgeRegistries;
-import zh.qiushui.mod.fpp.FloatablePressurePlates;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Objects;
@@ -21,9 +20,6 @@ public class FloatablePressurePlateBlock extends PressurePlateBlock {
 
     public FloatablePressurePlateBlock(Sensitivity sensitivity, Properties properties, BlockSetType type) {
         super(sensitivity, properties, type);
-        this.descriptionId = super.getDescriptionId()
-            .replace(FloatablePressurePlates.MOD_ID, ResourceLocation.DEFAULT_NAMESPACE)
-            .replace("floatable_", "");
     }
 
     @Override

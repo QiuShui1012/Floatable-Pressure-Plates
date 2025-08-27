@@ -1,5 +1,6 @@
 package zh.qiushui.mod.fpp.init;
 
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.BasePressurePlateBlock;
 import net.minecraft.world.level.block.Block;
@@ -17,7 +18,6 @@ import net.minecraftforge.registries.RegistryObject;
 import zh.qiushui.mod.fpp.FloatablePressurePlates;
 import zh.qiushui.mod.fpp.block.FloatablePressurePlateBlock;
 import zh.qiushui.mod.fpp.block.FloatableWeightedPressurePlateBlock;
-import zh.qiushui.mod.fpp.item.WithBlockNameBlockItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,7 +50,7 @@ public class ModBlocks {
             .pushReaction(PushReaction.DESTROY),
         BlockSetType.STONE
     );
-    public static final RegistryObject<WithBlockNameBlockItem> FLOATABLE_STONE_PRESSURE_PLATE_ITEM = registerBlockItem(
+    public static final RegistryObject<BlockItem> FLOATABLE_STONE_PRESSURE_PLATE_ITEM = registerBlockItem(
         FLOATABLE_STONE_PRESSURE_PLATE
     );
     public static final RegistryObject<FloatablePressurePlateBlock> FLOATABLE_OAK_PRESSURE_PLATE = registerNormal(
@@ -66,7 +66,7 @@ public class ModBlocks {
             .pushReaction(PushReaction.DESTROY),
         BlockSetType.OAK
     );
-    public static final RegistryObject<WithBlockNameBlockItem> FLOATABLE_OAK_PRESSURE_PLATE_ITEM = registerBlockItem(
+    public static final RegistryObject<BlockItem> FLOATABLE_OAK_PRESSURE_PLATE_ITEM = registerBlockItem(
         FLOATABLE_OAK_PRESSURE_PLATE
     );
     public static final RegistryObject<FloatablePressurePlateBlock> FLOATABLE_SPRUCE_PRESSURE_PLATE = registerNormal(
@@ -81,7 +81,7 @@ public class ModBlocks {
             .ignitedByLava()
             .pushReaction(PushReaction.DESTROY), BlockSetType.SPRUCE
     );
-    public static final RegistryObject<WithBlockNameBlockItem> FLOATABLE_SPRUCE_PRESSURE_PLATE_ITEM = registerBlockItem(
+    public static final RegistryObject<BlockItem> FLOATABLE_SPRUCE_PRESSURE_PLATE_ITEM = registerBlockItem(
         FLOATABLE_SPRUCE_PRESSURE_PLATE
     );
     public static final RegistryObject<FloatablePressurePlateBlock> FLOATABLE_BIRCH_PRESSURE_PLATE = registerNormal(
@@ -96,7 +96,7 @@ public class ModBlocks {
             .ignitedByLava()
             .pushReaction(PushReaction.DESTROY), BlockSetType.BIRCH
     );
-    public static final RegistryObject<WithBlockNameBlockItem> FLOATABLE_BIRCH_PRESSURE_PLATE_ITEM = registerBlockItem(
+    public static final RegistryObject<BlockItem> FLOATABLE_BIRCH_PRESSURE_PLATE_ITEM = registerBlockItem(
         FLOATABLE_BIRCH_PRESSURE_PLATE
     );
     public static final RegistryObject<FloatablePressurePlateBlock> FLOATABLE_JUNGLE_PRESSURE_PLATE = registerNormal(
@@ -112,7 +112,7 @@ public class ModBlocks {
             .pushReaction(PushReaction.DESTROY),
         BlockSetType.JUNGLE
     );
-    public static final RegistryObject<WithBlockNameBlockItem> FLOATABLE_JUNGLE_PRESSURE_PLATE_ITEM = registerBlockItem(
+    public static final RegistryObject<BlockItem> FLOATABLE_JUNGLE_PRESSURE_PLATE_ITEM = registerBlockItem(
         FLOATABLE_JUNGLE_PRESSURE_PLATE
     );
     public static final RegistryObject<FloatablePressurePlateBlock> FLOATABLE_ACACIA_PRESSURE_PLATE = registerNormal(
@@ -128,7 +128,7 @@ public class ModBlocks {
             .pushReaction(PushReaction.DESTROY),
         BlockSetType.ACACIA
     );
-    public static final RegistryObject<WithBlockNameBlockItem> FLOATABLE_ACACIA_PRESSURE_PLATE_ITEM = registerBlockItem(
+    public static final RegistryObject<BlockItem> FLOATABLE_ACACIA_PRESSURE_PLATE_ITEM = registerBlockItem(
         FLOATABLE_ACACIA_PRESSURE_PLATE
     );
     public static final RegistryObject<FloatablePressurePlateBlock> FLOATABLE_CHERRY_PRESSURE_PLATE = registerNormal(
@@ -144,7 +144,7 @@ public class ModBlocks {
             .pushReaction(PushReaction.DESTROY),
         BlockSetType.CHERRY
     );
-    public static final RegistryObject<WithBlockNameBlockItem> FLOATABLE_CHERRY_PRESSURE_PLATE_ITEM = registerBlockItem(
+    public static final RegistryObject<BlockItem> FLOATABLE_CHERRY_PRESSURE_PLATE_ITEM = registerBlockItem(
         FLOATABLE_CHERRY_PRESSURE_PLATE
     );
     public static final RegistryObject<FloatablePressurePlateBlock> FLOATABLE_DARK_OAK_PRESSURE_PLATE = registerNormal(
@@ -160,7 +160,7 @@ public class ModBlocks {
             .pushReaction(PushReaction.DESTROY),
         BlockSetType.DARK_OAK
     );
-    public static final RegistryObject<WithBlockNameBlockItem> FLOATABLE_DARK_OAK_PRESSURE_PLATE_ITEM = registerBlockItem(
+    public static final RegistryObject<BlockItem> FLOATABLE_DARK_OAK_PRESSURE_PLATE_ITEM = registerBlockItem(
         FLOATABLE_DARK_OAK_PRESSURE_PLATE
     );
     public static final RegistryObject<FloatablePressurePlateBlock> FLOATABLE_MANGROVE_PRESSURE_PLATE = registerNormal(
@@ -176,7 +176,7 @@ public class ModBlocks {
             .pushReaction(PushReaction.DESTROY),
         BlockSetType.MANGROVE
     );
-    public static final RegistryObject<WithBlockNameBlockItem> FLOATABLE_MANGROVE_PRESSURE_PLATE_ITEM = registerBlockItem(
+    public static final RegistryObject<BlockItem> FLOATABLE_MANGROVE_PRESSURE_PLATE_ITEM = registerBlockItem(
         FLOATABLE_MANGROVE_PRESSURE_PLATE
     );
     public static final RegistryObject<FloatablePressurePlateBlock> FLOATABLE_BAMBOO_PRESSURE_PLATE = registerNormal(
@@ -192,7 +192,7 @@ public class ModBlocks {
             .pushReaction(PushReaction.DESTROY),
         BlockSetType.BAMBOO
     );
-    public static final RegistryObject<WithBlockNameBlockItem> FLOATABLE_BAMBOO_PRESSURE_PLATE_ITEM = registerBlockItem(
+    public static final RegistryObject<BlockItem> FLOATABLE_BAMBOO_PRESSURE_PLATE_ITEM = registerBlockItem(
         FLOATABLE_BAMBOO_PRESSURE_PLATE
     );
     public static final RegistryObject<FloatablePressurePlateBlock> FLOATABLE_CRIMSON_PRESSURE_PLATE = registerNormal(
@@ -207,7 +207,7 @@ public class ModBlocks {
             .pushReaction(PushReaction.DESTROY),
         BlockSetType.CRIMSON
     );
-    public static final RegistryObject<WithBlockNameBlockItem> FLOATABLE_CRIMSON_PRESSURE_PLATE_ITEM = registerBlockItem(
+    public static final RegistryObject<BlockItem> FLOATABLE_CRIMSON_PRESSURE_PLATE_ITEM = registerBlockItem(
         FLOATABLE_CRIMSON_PRESSURE_PLATE
     );
     public static final RegistryObject<FloatablePressurePlateBlock> FLOATABLE_WARPED_PRESSURE_PLATE = registerNormal(
@@ -222,7 +222,7 @@ public class ModBlocks {
             .pushReaction(PushReaction.DESTROY),
         BlockSetType.WARPED
     );
-    public static final RegistryObject<WithBlockNameBlockItem> FLOATABLE_WARPED_PRESSURE_PLATE_ITEM = registerBlockItem(
+    public static final RegistryObject<BlockItem> FLOATABLE_WARPED_PRESSURE_PLATE_ITEM = registerBlockItem(
         FLOATABLE_WARPED_PRESSURE_PLATE
     );
     public static final RegistryObject<FloatableWeightedPressurePlateBlock> FLOATABLE_LIGHT_WEIGHTED_PRESSURE_PLATE = registerWeighted(
@@ -237,7 +237,7 @@ public class ModBlocks {
             .pushReaction(PushReaction.DESTROY),
         BlockSetType.GOLD
     );
-    public static final RegistryObject<WithBlockNameBlockItem> FLOATABLE_LIGHT_WEIGHTED_PRESSURE_PLATE_ITEM = registerBlockItem(
+    public static final RegistryObject<BlockItem> FLOATABLE_LIGHT_WEIGHTED_PRESSURE_PLATE_ITEM = registerBlockItem(
         FLOATABLE_LIGHT_WEIGHTED_PRESSURE_PLATE
     );
     public static final RegistryObject<FloatableWeightedPressurePlateBlock> FLOATABLE_HEAVY_WEIGHTED_PRESSURE_PLATE = registerWeighted(
@@ -252,7 +252,7 @@ public class ModBlocks {
             .pushReaction(PushReaction.DESTROY),
         BlockSetType.IRON
     );
-    public static final RegistryObject<WithBlockNameBlockItem> FLOATABLE_HEAVY_WEIGHTED_PRESSURE_PLATE_ITEM = registerBlockItem(
+    public static final RegistryObject<BlockItem> FLOATABLE_HEAVY_WEIGHTED_PRESSURE_PLATE_ITEM = registerBlockItem(
         FLOATABLE_HEAVY_WEIGHTED_PRESSURE_PLATE
     );
     public static final RegistryObject<FloatablePressurePlateBlock> FLOATABLE_POLISHED_BLACKSTONE_PRESSURE_PLATE = registerNormal(
@@ -268,7 +268,7 @@ public class ModBlocks {
             .pushReaction(PushReaction.DESTROY),
         BlockSetType.POLISHED_BLACKSTONE
     );
-    public static final RegistryObject<WithBlockNameBlockItem> FLOATABLE_POLISHED_BLACKSTONE_PRESSURE_PLATE_ITEM = registerBlockItem(
+    public static final RegistryObject<BlockItem> FLOATABLE_POLISHED_BLACKSTONE_PRESSURE_PLATE_ITEM = registerBlockItem(
         FLOATABLE_POLISHED_BLACKSTONE_PRESSURE_PLATE
     );
 
@@ -306,10 +306,10 @@ public class ModBlocks {
         return blockObj;
     }
 
-    private static RegistryObject<WithBlockNameBlockItem> registerBlockItem(RegistryObject<? extends Block> block) {
+    private static RegistryObject<BlockItem> registerBlockItem(RegistryObject<? extends Block> block) {
         return ITEMS.register(
             Objects.requireNonNull(block.getId()).getPath(),
-            () -> new WithBlockNameBlockItem(block.get(), new Item.Properties())
+            () -> new BlockItem(block.get(), new Item.Properties())
         );
     }
 

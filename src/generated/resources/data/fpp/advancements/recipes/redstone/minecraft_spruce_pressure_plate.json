@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_polished_blackstone_pressure_plate": {
+    "has_spruce_pressure_plate": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:polished_blackstone_pressure_plate"
+              "minecraft:spruce_pressure_plate"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:polished_blackstone_pressure_plate"
+        "recipe": "fpp:minecraft_spruce_pressure_plate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_polished_blackstone_pressure_plate",
+      "has_spruce_pressure_plate",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:polished_blackstone_pressure_plate"
+      "fpp:minecraft_spruce_pressure_plate"
     ]
   },
   "sends_telemetry_event": false
