@@ -1,5 +1,6 @@
 package zh.qiushui.mod.fpp.data;
 
+import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -22,10 +23,9 @@ import java.util.Objects;
 import java.util.function.Supplier;
 
 public class FloatableDataProvider {
-    public static void provide(GatherDataEvent event) {
-        ExistingFileHelper helper = event.getExistingFileHelper();
-        event.getGenerator().addProvider(true, (DataProvider.Factory<Blocks>) output -> new Blocks(output, helper));
-        event.getGenerator().addProvider(true, (DataProvider.Factory<Items>) output -> new Items(output, helper));
+    public static void provide(GatherDataEvent event, DataGenerator generator, ExistingFileHelper helper) {
+        generator.addProvider(event.includeServer(), (DataProvider.Factory<Blocks>) output -> new Blocks(output, helper));
+        generator.addProvider(event.includeServer(), (DataProvider.Factory<Items>) output -> new Items(output, helper));
     }
 
     private static class Blocks extends BlockStateProvider {

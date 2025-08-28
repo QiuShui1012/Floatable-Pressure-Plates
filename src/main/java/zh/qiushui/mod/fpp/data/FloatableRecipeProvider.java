@@ -1,5 +1,6 @@
 package zh.qiushui.mod.fpp.data;
 
+import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -25,8 +26,8 @@ public class FloatableRecipeProvider extends RecipeProvider {
         super(output);
     }
 
-    public static void provide(GatherDataEvent event) {
-        event.getGenerator().addProvider(true, (DataProvider.Factory<FloatableRecipeProvider>) FloatableRecipeProvider::new);
+    public static void provide(GatherDataEvent event, DataGenerator generator) {
+        generator.addProvider(event.includeServer(), (DataProvider.Factory<FloatableRecipeProvider>) FloatableRecipeProvider::new);
     }
 
     @Override

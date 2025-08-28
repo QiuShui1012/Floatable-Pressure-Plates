@@ -8,7 +8,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import zh.qiushui.mod.fpp.data.FloatableDataProvider;
 import zh.qiushui.mod.fpp.data.FloatableRecipeProvider;
 import zh.qiushui.mod.fpp.data.FloatableTagProvider;
-import zh.qiushui.mod.fpp.data.LangHandler;
+import zh.qiushui.mod.fpp.data.lang.LangHandler;
+import zh.qiushui.mod.fpp.data.loot.FloatableLootTableProvider;
 import zh.qiushui.mod.fpp.init.ModBlocks;
 import zh.qiushui.mod.fpp.init.ModItemGroups;
 
@@ -31,9 +32,10 @@ public class FloatablePressurePlates {
     }
 
     public static void onGatherData(GatherDataEvent event) {
-        FloatableDataProvider.provide(event);
-        FloatableRecipeProvider.provide(event);
-        FloatableTagProvider.provide(event);
-        LangHandler.provide(event);
+        FloatableDataProvider.provide(event, event.getGenerator(), event.getExistingFileHelper());
+        FloatableLootTableProvider.provide(event, event.getGenerator());
+        FloatableRecipeProvider.provide(event, event.getGenerator());
+        FloatableTagProvider.provide(event, event.getGenerator(), event.getExistingFileHelper());
+        LangHandler.provide(event, event.getGenerator());
     }
 }

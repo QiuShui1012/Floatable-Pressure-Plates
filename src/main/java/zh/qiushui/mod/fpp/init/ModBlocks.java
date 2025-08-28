@@ -10,7 +10,6 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
-import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -46,8 +45,7 @@ public class ModBlocks {
             .instrument(NoteBlockInstrument.BASEDRUM)
             .requiresCorrectToolForDrops()
             .noCollission()
-            .strength(0.5F)
-            .pushReaction(PushReaction.DESTROY),
+            .strength(0.5F),
         BlockSetType.STONE
     );
     public static final RegistryObject<BlockItem> FLOATABLE_STONE_PRESSURE_PLATE_ITEM = registerBlockItem(
@@ -62,8 +60,7 @@ public class ModBlocks {
             .instrument(NoteBlockInstrument.BASS)
             .noCollission()
             .strength(0.5F)
-            .ignitedByLava()
-            .pushReaction(PushReaction.DESTROY),
+            .ignitedByLava(),
         BlockSetType.OAK
     );
     public static final RegistryObject<BlockItem> FLOATABLE_OAK_PRESSURE_PLATE_ITEM = registerBlockItem(
@@ -78,8 +75,8 @@ public class ModBlocks {
             .instrument(NoteBlockInstrument.BASS)
             .noCollission()
             .strength(0.5F)
-            .ignitedByLava()
-            .pushReaction(PushReaction.DESTROY), BlockSetType.SPRUCE
+            .ignitedByLava(),
+        BlockSetType.SPRUCE
     );
     public static final RegistryObject<BlockItem> FLOATABLE_SPRUCE_PRESSURE_PLATE_ITEM = registerBlockItem(
         FLOATABLE_SPRUCE_PRESSURE_PLATE
@@ -93,8 +90,8 @@ public class ModBlocks {
             .instrument(NoteBlockInstrument.BASS)
             .noCollission()
             .strength(0.5F)
-            .ignitedByLava()
-            .pushReaction(PushReaction.DESTROY), BlockSetType.BIRCH
+            .ignitedByLava(),
+        BlockSetType.BIRCH
     );
     public static final RegistryObject<BlockItem> FLOATABLE_BIRCH_PRESSURE_PLATE_ITEM = registerBlockItem(
         FLOATABLE_BIRCH_PRESSURE_PLATE
@@ -108,8 +105,7 @@ public class ModBlocks {
             .instrument(NoteBlockInstrument.BASS)
             .noCollission()
             .strength(0.5F)
-            .ignitedByLava()
-            .pushReaction(PushReaction.DESTROY),
+            .ignitedByLava(),
         BlockSetType.JUNGLE
     );
     public static final RegistryObject<BlockItem> FLOATABLE_JUNGLE_PRESSURE_PLATE_ITEM = registerBlockItem(
@@ -124,8 +120,7 @@ public class ModBlocks {
             .instrument(NoteBlockInstrument.BASS)
             .noCollission()
             .strength(0.5F)
-            .ignitedByLava()
-            .pushReaction(PushReaction.DESTROY),
+            .ignitedByLava(),
         BlockSetType.ACACIA
     );
     public static final RegistryObject<BlockItem> FLOATABLE_ACACIA_PRESSURE_PLATE_ITEM = registerBlockItem(
@@ -140,8 +135,7 @@ public class ModBlocks {
             .instrument(NoteBlockInstrument.BASS)
             .noCollission()
             .strength(0.5F)
-            .ignitedByLava()
-            .pushReaction(PushReaction.DESTROY),
+            .ignitedByLava(),
         BlockSetType.CHERRY
     );
     public static final RegistryObject<BlockItem> FLOATABLE_CHERRY_PRESSURE_PLATE_ITEM = registerBlockItem(
@@ -156,8 +150,7 @@ public class ModBlocks {
             .instrument(NoteBlockInstrument.BASS)
             .noCollission()
             .strength(0.5F)
-            .ignitedByLava()
-            .pushReaction(PushReaction.DESTROY),
+            .ignitedByLava(),
         BlockSetType.DARK_OAK
     );
     public static final RegistryObject<BlockItem> FLOATABLE_DARK_OAK_PRESSURE_PLATE_ITEM = registerBlockItem(
@@ -172,8 +165,7 @@ public class ModBlocks {
             .instrument(NoteBlockInstrument.BASS)
             .noCollission()
             .strength(0.5F)
-            .ignitedByLava()
-            .pushReaction(PushReaction.DESTROY),
+            .ignitedByLava(),
         BlockSetType.MANGROVE
     );
     public static final RegistryObject<BlockItem> FLOATABLE_MANGROVE_PRESSURE_PLATE_ITEM = registerBlockItem(
@@ -188,8 +180,7 @@ public class ModBlocks {
             .instrument(NoteBlockInstrument.BASS)
             .noCollission()
             .strength(0.5F)
-            .ignitedByLava()
-            .pushReaction(PushReaction.DESTROY),
+            .ignitedByLava(),
         BlockSetType.BAMBOO
     );
     public static final RegistryObject<BlockItem> FLOATABLE_BAMBOO_PRESSURE_PLATE_ITEM = registerBlockItem(
@@ -203,8 +194,7 @@ public class ModBlocks {
             .forceSolidOn()
             .instrument(NoteBlockInstrument.BASS)
             .noCollission()
-            .strength(0.5F)
-            .pushReaction(PushReaction.DESTROY),
+            .strength(0.5F),
         BlockSetType.CRIMSON
     );
     public static final RegistryObject<BlockItem> FLOATABLE_CRIMSON_PRESSURE_PLATE_ITEM = registerBlockItem(
@@ -218,8 +208,7 @@ public class ModBlocks {
             .forceSolidOn()
             .instrument(NoteBlockInstrument.BASS)
             .noCollission()
-            .strength(0.5F)
-            .pushReaction(PushReaction.DESTROY),
+            .strength(0.5F),
         BlockSetType.WARPED
     );
     public static final RegistryObject<BlockItem> FLOATABLE_WARPED_PRESSURE_PLATE_ITEM = registerBlockItem(
@@ -233,8 +222,7 @@ public class ModBlocks {
             .forceSolidOn()
             .requiresCorrectToolForDrops()
             .noCollission()
-            .strength(0.5F)
-            .pushReaction(PushReaction.DESTROY),
+            .strength(0.5F),
         BlockSetType.GOLD
     );
     public static final RegistryObject<BlockItem> FLOATABLE_LIGHT_WEIGHTED_PRESSURE_PLATE_ITEM = registerBlockItem(
@@ -248,8 +236,7 @@ public class ModBlocks {
             .forceSolidOn()
             .requiresCorrectToolForDrops()
             .noCollission()
-            .strength(0.5F)
-            .pushReaction(PushReaction.DESTROY),
+            .strength(0.5F),
         BlockSetType.IRON
     );
     public static final RegistryObject<BlockItem> FLOATABLE_HEAVY_WEIGHTED_PRESSURE_PLATE_ITEM = registerBlockItem(
@@ -264,8 +251,7 @@ public class ModBlocks {
             .instrument(NoteBlockInstrument.BASEDRUM)
             .requiresCorrectToolForDrops()
             .noCollission()
-            .strength(0.5F)
-            .pushReaction(PushReaction.DESTROY),
+            .strength(0.5F),
         BlockSetType.POLISHED_BLACKSTONE
     );
     public static final RegistryObject<BlockItem> FLOATABLE_POLISHED_BLACKSTONE_PRESSURE_PLATE_ITEM = registerBlockItem(

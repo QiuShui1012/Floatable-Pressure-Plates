@@ -1,6 +1,7 @@
 package zh.qiushui.mod.fpp.data;
 
 import net.minecraft.core.HolderLookup;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -20,14 +21,13 @@ import java.util.concurrent.CompletableFuture;
 
 @ParametersAreNonnullByDefault
 public class FloatableTagProvider {
-    public static void provide(GatherDataEvent event) {
+    public static void provide(GatherDataEvent event, DataGenerator generator, ExistingFileHelper helper) {
         CompletableFuture<HolderLookup.Provider> registries = event.getLookupProvider();
-        ExistingFileHelper helper = event.getExistingFileHelper();
-        CompletableFuture<TagsProvider.TagLookup<Block>> blockTagLookup = event.getGenerator().addProvider(
-            true,
+        CompletableFuture<TagsProvider.TagLookup<Block>> blockTagLookup = generator.addProvider(
+            event.includeServer(),
             (DataProvider.Factory<Blocks>) output -> new Blocks(output, registries, helper)
         ).contentsGetter();
-        event.getGenerator().addProvider(true, (DataProvider.Factory<Items>) output -> new Items(
+        generator.addProvider(event.includeServer(), (DataProvider.Factory<Items>) output -> new Items(
             output,
             registries,
             blockTagLookup,
