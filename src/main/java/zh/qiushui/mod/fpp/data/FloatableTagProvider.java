@@ -64,6 +64,11 @@ public class FloatableTagProvider {
             this.tag(BlockTags.STONE_PRESSURE_PLATES)
                 .add(ModBlocks.FLOATABLE_STONE_PRESSURE_PLATE.get())
                 .add(ModBlocks.FLOATABLE_POLISHED_BLACKSTONE_PRESSURE_PLATE.get());
+            this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.FLOATABLE_STONE_PRESSURE_PLATE.get())
+                .add(ModBlocks.FLOATABLE_POLISHED_BLACKSTONE_PRESSURE_PLATE.get())
+                .add(ModBlocks.FLOATABLE_LIGHT_WEIGHTED_PRESSURE_PLATE.get())
+                .add(ModBlocks.FLOATABLE_HEAVY_WEIGHTED_PRESSURE_PLATE.get());
         }
     }
 
